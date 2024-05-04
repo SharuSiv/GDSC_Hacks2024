@@ -5,6 +5,7 @@ import Auth from './pages/Auth';
 import Home from './pages/Home';
 import About from './pages/About';
 import { Navbar } from './components/Navbar';
+import Recording from './pages/Recording';
 
 const App = ({Component, pageProps}) => {
   return (
@@ -16,6 +17,7 @@ const App = ({Component, pageProps}) => {
           <Route path ="/About" element={<About />}/>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/Auth" element={<Auth/>}/>
+          <Route path="/Recording" element={<Recording/>}/>
         </Routes>
       </div>
     </Router>
