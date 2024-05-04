@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
+import { AuthContext } from './AuthContext';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 function Login() {
+  const [email, setEmail]=useState("");
+  const [password, setPassword] = useState('');
+  const {setIsLoggedIn} = useContext(AuthContext);
+  const navigate = useNavigate();
+  
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (email === "hello@gmail.com" && password ==="123456") {
+      setIsLoggedIn(true);
+      navigate("/Home");
+    }
+  }
+
   return (
-    <form className="mt-8 space-y-6">
+    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
       <div className="rounded-md shadow-sm -space-y-px">
         <div>
           <label htmlFor="email-address" className="sr-only">
@@ -16,6 +33,8 @@ function Login() {
             required
             className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
@@ -30,6 +49,8 @@ function Login() {
             required
             className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
       </div>
