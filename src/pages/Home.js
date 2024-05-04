@@ -5,7 +5,7 @@ import image from '../img/image.png';
 import addnotes from '../img/more.png';
 import recordLogo from '../img/wave-sound.png';
 import importNote from '../img/upload.png';
-
+import './Home.css';
 const Home = () => {
   const [folders, setFolders] = useState([]);
 
@@ -22,13 +22,23 @@ const Home = () => {
 
   const addFolder = () => {
     setFolders([...folders, { id: Date.now(), title: '', notes: [] }]);
-  };
+    console.log(folders)  };
 
   const [notes, setNotes] = useState([]);
 
   const addNote = () => {
     setNotes([...notes, { id: Date.now(), content: '' }]);
   };
+
+  const onDelete = (id) => {
+    console.log('Deleting folder with id:', id);
+    setFolders(folders.filter((folder) => folder.id !== id));
+    console.log(folders)
+  };
+
+  const recordNote = () => {
+    
+  }
 
   return (
     <div className="home-container">
@@ -47,7 +57,7 @@ const Home = () => {
             <h4>+ Add Note</h4>
           </li>
           <li className="nav-item">
-            <button className="btn-start-recording">
+            <button className="btn-start-recording" onClick={recordNote}>
               <img src={recordLogo} alt="start recording" />
             </button>
             <h4>Start Recording</h4>
@@ -74,7 +84,7 @@ const Home = () => {
               notes={folder.notes}
               onMove={() => console.log('Move folder', folder.id)}
               onRename={(e) => renameFolder(folder.id, e.target.value)}
-              onDelete={() => console.log('Delete folder', folder.id)}
+              onDelete={(id) => onDelete(folder.id)}
             />
           ))}
         </section>
