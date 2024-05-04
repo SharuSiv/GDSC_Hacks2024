@@ -6,10 +6,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import { Navbar } from './components/Navbar';
 import Recording from './pages/Recording';
+import { AuthProvider } from './components/AuthProvider';
 
 const App = ({Component, pageProps}) => {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <Navbar/>
       <div>
         <Routes>
@@ -21,6 +23,8 @@ const App = ({Component, pageProps}) => {
         </Routes>
       </div>
     </Router>
+    </AuthProvider>
+    
   );
 };
 
