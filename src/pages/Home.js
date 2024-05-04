@@ -6,8 +6,12 @@ import addnotes from '../img/more.png';
 import recordLogo from '../img/wave-sound.png';
 import importNote from '../img/upload.png';
 import './Home.css';
+import { useNavigate } from "react-router-dom";
+
+
 const Home = () => {
   const [folders, setFolders] = useState([]);
+  const navigate = useNavigate();
 
   const renameFolder = (id, newTitle) => {
     setFolders(
@@ -37,7 +41,8 @@ const Home = () => {
   };
 
   const recordNote = () => {
-    
+    navigate("/Recording");  
+
   }
 
   return (

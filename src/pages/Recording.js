@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import './Recording.css';
 
 
 const audioBlobToBase64 = (blob) => {
@@ -20,7 +21,7 @@ const audioBlobToBase64 = (blob) => {
   });
 };
 
-const App = () => {
+const Recording = () => {
   const [recording, setRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const [transcription, setTranscription] = useState('');
@@ -33,7 +34,7 @@ const App = () => {
     };
   }, [mediaRecorder]);
 
-  if (!process.env.GOOGLE_API_KEY) {
+  if (!process.env.REACT_APP_GOOGLE_API_KEY) {
     throw new Error("REACT_APP_GOOGLE_API_KEY not found in the environment");
   }
 
@@ -120,4 +121,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Recording;
