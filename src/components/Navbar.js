@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../img/images.png"
 
 export const Navbar = () => {
   return (
      <nav className="nav container" id="nav-bar">
-       <NavLink to="/" className="nav__logo">
-          <img src="../img/image.png" alt="Logo" className="nav__logo-img" />
+       <NavLink className="nav__logo">
+          <img src={logo} alt="Logo" className="nav__logo-img" />
        </NavLink>
 
        <div className={"nav__menu"} id="nav-menu">

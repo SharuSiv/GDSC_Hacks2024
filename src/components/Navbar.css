@@ -2,6 +2,11 @@
     background-color: black; 
     color: white;
   }
+
+  .nav__logo-img {
+    width: 75px;
+    height: auto;
+  }
   
 .nav__list {
     display: flex;
@@ -19,8 +24,16 @@
   
   .nav__link.button {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #AF8260;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     color: white; 
     border-radius: 4px; 
   }
-  
+
+  .nav__link.button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
