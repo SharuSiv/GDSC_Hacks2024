@@ -15,6 +15,7 @@ const App = ({Component, pageProps}) => {
           <Route path="/" element={<About />} />
           <Route path ="/About" element={<About />}/>
           <Route path="/Home" element={<Home/>}/>
+          <Route path="/Auth" element={<Auth/>}/>
         </Routes>
       </div>
     </Router>
