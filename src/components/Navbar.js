@@ -1,20 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
 import "./Navbar.css";
 
 export const Navbar = () => {
   return (
-     <header className="header">
-     <nav className="nav container">
+     <nav className="nav container" id="nav-bar">
        <NavLink to="/" className="nav__logo">
-         Navigation Bar
+          <img src="../img/image.png" alt="Logo" className="nav__logo-img" />
        </NavLink>
 
-       <div
-         className={"nav__menu"}
-         id="nav-menu"
-       >
+       <div className={"nav__menu"} id="nav-menu">
          <ul className="nav__list">
            <li className="nav__item">
              <NavLink to="/" className="nav__link">
@@ -22,29 +17,18 @@ export const Navbar = () => {
              </NavLink>
            </li>
            <li className="nav__item">
-             <NavLink to="/about-us" className="nav__link">
+             <NavLink to="/About" className="nav__link">
                About Us
              </NavLink>
            </li>
            <li className="nav__item">
-             <NavLink
-               to="/login"
-               className="nav__link"
-             >
+             <NavLink to="/Auth" className="nav__link button">
                Login
              </NavLink>
            </li>
          </ul>
-         <div className="nav__close" id="nav-close">
-           <IoClose />
-         </div>
-       </div>
-
-       <div className="nav__toggle" id="nav-toggle">
-         <IoMenu />
        </div>
      </nav>
-   </header>
 
   )
 }
