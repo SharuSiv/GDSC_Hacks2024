@@ -1,12 +1,12 @@
 //import logo from './logo.svg';
 
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useContext} from 'react'
 import "@tensorflow/tfjs-backend-webgl";
 import * as handpose from "@tensorflow-models/handpose"
 import Webcam from 'react-webcam'
 import { drawHand } from './utility';
 import * as fp from "fingerpose"
-
+import GestureContext from './GestureContext';
 
 
 function HandTracking() {
@@ -14,13 +14,16 @@ function HandTracking() {
   const canvasRef=useRef(null)
 
   const [pose, setPose]= useState(null)
-
+  const {gesture,setGesture} = useContext(GestureContext);
   const runHandpose = async () =>{
-    const net = await handpose.load()
+    //const model = await handpose.load()
+    const model = await handpose.load({
+        modelUrl: 'https://cors-anywhere.herokuapp.com/https://tfhub.dev/mediapipe/tfjs-model/handskeleton/1/default/1',
+      });
     console.log('Handpose model loaded')
     // loop detect hands
     setInterval (()=>{
-      detect(net)
+      detect(model)
     }, 100)
   };
 
@@ -61,12 +64,16 @@ function HandTracking() {
         const confidence = gesture.gestures.map(
           (prediction) => prediction.score
         )
-        console.log('confidence array:', confidence)
+        //console.log('confidence array:', confidence)
         const maxCon = confidence.indexOf(Math.max.apply(null, confidence))
-        console.log('maxCon:', maxCon)
+        //console.log('maxCon:', maxCon)
 
         setPose(gesture.gestures[maxCon].name);
         console.log('pose:', pose);
+
+        // if (gesture.gestures[maxCon].name === 'thumbs_up') {
+        //     setGesture('new_line');
+        //   }
       }
      
       }

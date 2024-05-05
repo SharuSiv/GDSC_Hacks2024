@@ -71,3 +71,10 @@ cursor: pointer;
     flex-direction: row;
 }
 
+.generate-now {
+    background-color: #AF8260;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
