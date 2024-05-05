@@ -8,10 +8,13 @@ import './Home.css';
 import { useNavigate } from "react-router-dom";
 import backgroundImage from '../img/welcome-brief.png';
 
+import { useContext } from 'react';
+import { AuthContext } from '../components/AuthContext';
 
 const Home = () => {
   const [folders, setFolders] = useState([]);
   const navigate = useNavigate();
+  const { isLoggedIn } = useContext(AuthContext);
 
   const renameFolder = (id, newTitle) => {
     setFolders(
@@ -47,6 +50,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      {isLoggedIn && (
+      <> <header className="header">
+        <img src={image} alt="logo" className="logo" />
+        <h1 className="welcome-message">Welcome Back, name!</h1>
+      </header>
 
       <div className="Welcome-brief">
 
@@ -111,6 +119,11 @@ const Home = () => {
           ))}
         </section>
       </main>
+      </>)}
+      {!isLoggedIn && ( <h1> You are not logged in. Please login to access this page</h1>)}
+       
+      
+      
     </div>
   );
 };
