@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { AuthContext } from './AuthContext';
 import { Navigate, useNavigate } from 'react-router-dom';
-
+import '../pages/auth.css'
 
 function Login() {
   const [email, setEmail]=useState("");
@@ -58,9 +58,9 @@ function Login() {
       <div className="flex justify-center">
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:ring-indigo-500"
+          className='btn-auth' 
         >
-          Confirm
+          Login
         </button>
       </div>
     </form>

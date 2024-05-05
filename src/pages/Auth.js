@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
+import './auth.css';
 
 const Auth = () => {
   const [showLoginInfo, setShowLoginInfo] = useState(true);
@@ -14,30 +15,10 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-md shadow-md w-96">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white">
+      <div >
         {/* Login and Sign Up buttons */}
-        <div className="flex justify-between mb-6">
-          <button
-            onClick={handleLoginClick}
-            className={`px-4 py-2 rounded-md focus:outline-none ${
-              showLoginInfo
-                ? 'bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-600'
-                : 'bg-gray-300 text-gray-600 hover:bg-gray-400 focus:bg-gray-400'
-            }`}
-          >
-            Login
-          </button>
-          <button
-            onClick={handleSignUpClick}
-            className={`px-4 py-2 rounded-md focus:outline-none ${
-              showLoginInfo
-                ? 'bg-gray-300 text-gray-600 hover:bg-gray-400 focus:bg-gray-400'
-                : 'bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-600'
-            }`}
-          >
-            Sign Up
-          </button>
+  
         </div>
         {/* Login or Sign Up info */}
         {showLoginInfo ? (
@@ -46,6 +27,12 @@ const Auth = () => {
               Login
             </h2>
             {<Login />}
+            <p className="text-center mt-4">
+              Don't have an account?{' '}
+              <a href="#" onClick={handleSignUpClick} className="text-blue-500 hover:underline">
+                Sign Up
+              </a>
+            </p>
           </div>
         ) : (
           <div>
@@ -53,10 +40,16 @@ const Auth = () => {
               Sign Up
             </h2>
             {<Signup />}
+            <p className="text-center mt-4">
+              Already have an account?{' '}
+              <a href="#" onClick={handleLoginClick} className="text-blue-500 hover:underline">
+                Sign In
+              </a>
+            </p>
           </div>
         )}
       </div>
-    </div>
+ 
   );
 };
 

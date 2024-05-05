@@ -113,12 +113,13 @@ function HandTracking() {
           marginRight:"auto",
           left:0,
           right:0,
+          top:0,
           textAlign: "center",
           zindex: 9,
           width: 600,
           height: 600,
        }}/>
-
+3
       </header>
     </div>
   );

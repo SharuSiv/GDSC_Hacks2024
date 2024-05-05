@@ -14,12 +14,14 @@ body {
   }
   
   .button-container button {
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-bottom: 10px; 
+    padding-left: 10px;
+
   }
 
 
   button {
-    background-color: #a9a9a9;
+  background-color: #a9a9a9;
   color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
