@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+_Why bother typing notes when you can have AI write it for you! With simple movement of your hand the world doc is literally in your hands! Amazing right! Give us a try! We promise it'll be worth it!_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💡 Inspiration
+We at Note Ease saw the vast opportunity of expanding AI into the education, and took it to the next level with our full stack app, Note Ease. Throughout the journey we've come to acknowledge AI as much as it helps with careers can also start being an aid/guide to the new and upcoming generation of today. Through immersive lectures, timeless and effortless notetaking abilities, and it's use of AI, we've empowered an educational tool to aid in classroom learning and personalized notetaking abilities. 
 
-## Available Scripts
+During lectures, students tend to either listen to lectures and be selective of the key concepts and disregard the less important facts which usually end up surprising the student during examinations. However! what if we told you there's a way to combat this. Just what if we used AI to lend a ear to give you the opportunity to fully immerse yourself in the lesson while notetaking magically happens with the help of your friend AI. Combating student awareness during the lessons and providing another source of studying is a crucial goal which we chose to overcome throughout the project. 
 
-In the project directory, you can run:
+## 🛠️ What it does
+With Note Ease our overall app allows students the flexibility to listen to their profs while having AI assist and listen to the in class lecture readings to develop a transcript. During the developing of the transcript the user has the opportunity to format the notes to their liking by using Tensor Flow embedded into the website which tracks the students hand movement to add the indentation or the bullet point of the students choosing rather than manually type it out. This helps prevent the loss of important data from the class recording while also giving the student the opportunity to listen to the lecture while the notes are being taken care of by the AI. 
 
-### `npm start`
+## 🧰 How we built it
+With the use of **TensorFlow** and **Google Cloud** we've been able to create an environment to detect student hand gestures during their respective lessons or private study sessions to format verbal thoughts onto a pdf online.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In order to build this we've used:
+- Tensor Flow
+- Google Cloud
+- Google Gemini
+- MongoDB
+- React
+- Express
+- Node.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Tensor Flow** was used to detect the hand gestures and keep track of which hand gesture associates with the provided formatting of the pdf notes. For examples the thumbs up allows you to start a bullet point list, whereas the thumbs down allows you to end the bullet point list and return back to paragraph notes. 
 
-### `npm test`
+Similar to implement the **Tensor Flow** gestures the WebApp must allow for accepting raw audio from the users microphone and translating that in a transcript projected onto the web so **Tensor Flow** knows which key details/information it must turn into notes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Google Gemini** then follows up with translating the basic formatting from **Tensor flow** and the transcript from **Google Cloud Speech-to-Text API** to provide better worded/formatted notes with possible images upon key words within the produced pdf.
 
-### `npm run build`
+Which follows up with storing the notes into a database, **MongoDB**. It stores user information such as registration and login info. It also further saves the students notes and file organization structure creating an online workplace simulating several notes books or series of notebooks (notes of a specific subject or topic). 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Overall to help launch this WebApp we've utilized the **MERN stack** specifically using **React** to help with overall with the structure and integral coding components. Since react is a language used to help maintain structure and has a flexible powerful modular language. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚠️ Challenges we ran into
+One of the main primary challenges we ran into during the collaboration of Note Ease is incorporating both the **Google Cloud Speech to Text API** and the **Tensor Flow** to simultaneously take into account of the hand gesture the user is making for the note formatting and obtaining the transcript for the notes through recognizing voice from a raw input. Throughout overcoming this challenges we've tried many different approaches such as delaying the time of the Tensor Flow to allow for WebApp to first hear the transcript required prior to creating the formatting or trying to integrate both simultaneously and somehow converting into a pdf file. Although obstacle seemed less likely to be solved throughout the duration of this hackathon we've come together as a team and worked through this obstacle and solved the problem one step at a time. At Note Ease just as it's easy to take notes we get through the challenges one step at a time!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏆 Accomplishments that we're proud of
+As a team, we've collectively collaborated although we're from different backgrounds within coding. As this is the first hackathon for most of our members we're proud to have attempted to create an impressive app that can allow students to feel at ease when it comes to note taking and paying attention in class. Although we all came from different backgrounds with different coding experiences we didn't let the differences stop us from making an incredible app which is being presented to you today. This app has been made with lots of attention and love hoping one day students will be able to use this in real time to help with their educational purposes.
 
-### `npm run eject`
+In terms of coding wise tho, we are proud to have set up the beginning stages of MongoDB, as well as proud of working with React. Pretty much all of my team members were new to React and learning it was a challenge itself however with teamwork and determination we've been able to overcome this obstacle. Another coding aspect which we're proud of is the inclusion of Tensor Flow and Google Cloud Speech-to-Text API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📑 What we learned
+Overall, our team has learned how to properly use the MERN stack to develop a web application and how to use react in terms of syntax both front end and back end. We've also been able to successfully use API with the help of Google Cloud, and further learned what Tensor Flow is used for and embedded it on our site. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔮 What's next for Note Ease
+Although during the 72 hours we've accomplished a lot, we have yet to accomplish the full aspect of this web application idea, and we plan to continue it's development until it reaches to the liking of all our team members. Foremost we plan on training the hand model using Tensor Flow to be able to create and customize more hand gestures to help better format the notes. Another goal is to train Gemini to help format the notes properly in an aesthetically pleasing way with all the proper indentations, bullet points, and other notetaking formats to help the students notes better. We plan be fully be able to create a working connection between the Google Cloud Speech-to-Text API, Tensor Flow as well as Google Gemini. This connection will occur in terms of the Google API sending the transcript while the student hand gestures are noted within the transcript as well. Later when the student clicks submit it will sent the request to Google Gemini to help transition all the students needs in terms of note formatting and display it right back to the student. Overall we have a lot of goals and aspirations for Note Ease which we aim to complete overtime to help student get the education they deserve!
