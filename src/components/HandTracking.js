@@ -101,7 +101,7 @@ function HandTracking() {
        ref={canvasRef}
        style={{
         position:"absolute",
-          marginLeft:"auto",
+          marginLeft:"top",
           marginRight:"auto",
           left:0,
           right:0,
