@@ -5,7 +5,7 @@ import Auth from './pages/Auth';
 import Home from './pages/Home';
 import About from './pages/About';
 import { Navbar } from './components/Navbar';
-import Recording from './components/SpeechText';
+import Recording from './pages/Recording';
 import { AuthProvider } from './components/AuthProvider';
 
 const App = ({Component, pageProps}) => {

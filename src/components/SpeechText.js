@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import './SpeechText.css';
 
 const audioBlobToBase64 = async (blob) => {
   const reader = new FileReader();
@@ -19,7 +20,7 @@ const audioBlobToBase64 = async (blob) => {
   });
 };
 
-const App = () => {
+const SpeechText = () => {
   const [recording, setRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const [transcription, setTranscription] = useState('');
@@ -94,7 +95,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <h1>Speech to Text</h1>
+    
       </div>
       <div className="button-container">
         <button onClick={startRecording} disabled={recording}>
@@ -112,4 +113,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SpeechText;
