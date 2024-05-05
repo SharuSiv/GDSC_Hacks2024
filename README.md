@@ -43,6 +43,6 @@ In terms of coding wise tho, we are proud to have set up the beginning stages of
 Overall, our team has learned how to properly use the MERN stack to develop a web application and how to use react in terms of syntax both front end and back end. We've also been able to successfully use API with the help of Google Cloud, and further learned what Tensor Flow is used for and embedded it on our site. 
 
 ## 🔮 What's next for Note Ease
-[] training the hand model further using Tensor Flow
-[] Getting started with Google Gemini (Vertex AI) to help convert pdf of raw transcript into desired format 
-[] Set-up MongoDB to store all notes and file setting
+[ ] training the hand model further using Tensor Flow
+[ ] Getting started with Google Gemini (Vertex AI) to help convert pdf of raw transcript into desired format 
+[ ] Set-up MongoDB to store all notes and file setting
