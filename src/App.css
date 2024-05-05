@@ -40,7 +40,7 @@ align-items: center;
 display: flex;
 margin: 0 auto;
 padding: 10px 20px;
-background-color: AF8260;
+background-color: black;
 color: #fff;
 border: none;
 border-radius: 5px;
@@ -62,3 +62,12 @@ cursor: pointer;
     border-radius: 120px 20px 120px 20px;
     display: inline;
 }
+
+.recording-header {
+    background-color: #fff;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
