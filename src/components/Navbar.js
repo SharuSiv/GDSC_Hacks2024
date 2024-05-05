@@ -1,30 +1,28 @@
-import React, { useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import React, { useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
-import logo from "../img/image.png"
+import logo from '../img/image.png';
 
-import { AuthContext } from "./AuthContext";
-
-
+import { AuthContext } from './AuthContext';
 
 export const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
 
   return (
-     <nav className="nav container" id="nav-bar">
-       <NavLink className="nav__logo">
-          <img src={logo} alt="Logo" className="nav__logo-img" />
-       </NavLink>
+    <nav className="nav container, " id="nav-bar">
+      <NavLink className="nav__logo">
+        <img src={logo} alt="Logo" className="nav__logo-img" />
+      </NavLink>
 
-       <div className={"nav__menu"} id="nav-menu">
-         <ul className="nav__list">
-         <li className="nav__item">
-             <NavLink to="/About" className="nav__link">
-               About Us
-             </NavLink>
-           </li>
-           {isLoggedIn ? (
+      <div className={'nav__menu'} id="nav-menu">
+        <ul className="nav__list">
+          <li className="nav__item">
+            <NavLink to="/About" className="nav__link">
+              About Us
+            </NavLink>
+          </li>
+          {isLoggedIn ? (
             <>
               <li className="nav__item">
                 <NavLink to="/Home" className="nav__link">
@@ -45,11 +43,8 @@ export const Navbar = () => {
               </NavLink>
             </li>
           )}
-     
-           
-         </ul>
-       </div>
-     </nav>
-
-  )
-}
+        </ul>
+      </div>
+    </nav>
+  );
+};
