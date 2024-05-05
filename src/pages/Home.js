@@ -6,7 +6,7 @@ import recordLogo from '../img/wave-sound.png';
 import importNote from '../img/upload.png';
 import './Home.css';
 import { useNavigate } from "react-router-dom";
-import backgroundImage from '../img/welcome-brief.png';
+import image from '../img/welcome-brief.png';
 
 import { useContext } from 'react';
 import { AuthContext } from '../components/AuthContext';

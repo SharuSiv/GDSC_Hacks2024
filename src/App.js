@@ -6,9 +6,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import { Navbar } from './components/Navbar';
 import Recording from './components/SpeechText';
+import { AuthProvider } from './components/AuthProvider';
 
 const App = ({Component, pageProps}) => {
   return (
+    <AuthProvider>
     <Router>
       <Navbar/>
       <div>
@@ -21,6 +23,7 @@ const App = ({Component, pageProps}) => {
         </Routes>
       </div>
     </Router>
+    </AuthProvider>
   );
 };
 

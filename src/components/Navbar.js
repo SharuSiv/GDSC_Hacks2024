@@ -1,14 +1,12 @@
 import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-<<<<<<< HEAD
-import logo from "../img/image.png"
-=======
 
 import logo from "../img/image.png"
+
 import { AuthContext } from "./AuthContext";
 
->>>>>>> 5c10badb79db317e82d112950220d097f292aab7
+
 
 export const Navbar = () => {
   const { isLoggedIn } = useContext(AuthContext);
