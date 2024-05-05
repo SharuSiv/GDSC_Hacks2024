@@ -11,15 +11,15 @@ const Recording = () => {
 
   return (
     <GestureContext.Provider value={{gesture,setGesture}}>
-    <div className="recording-header">
+   
     <div className='camera-container'> 
         <HandTracking/>
     </div>
+    <br/>
     <div className="recording-container">
         <SpeechText />
     </div>
-    
-    </div>
+
     </GestureContext.Provider>
     
   )

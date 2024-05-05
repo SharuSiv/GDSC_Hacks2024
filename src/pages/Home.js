@@ -53,10 +53,6 @@ const Home = () => {
       {isLoggedIn && (
         <>
           {' '}
-          <header className="header">
-            <img src={image} alt="logo" className="logo" />
-            <h1 className="welcome-message">Welcome Back, name!</h1>
-          </header>
           <div className="Welcome-brief">
             <h1 className="welcome-message">Welcome Back, Friend!</h1>
             <br />

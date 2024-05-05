@@ -34,9 +34,10 @@ body {
 
   .note p{
     justify-items: center;
-    font-size: larger;
+    font-size: medium;
   }
 
   .note {
     background-image: url('../img/paper.jpeg');
+    justify-content: right;
   }
