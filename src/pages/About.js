@@ -1,3 +1,4 @@
+
 import React from 'react'
 import img from '../img/girl.jpg'
 import imgacc from '../img/accessibility.png'
@@ -32,10 +33,9 @@ const About = () => {
     <img src={imgTime} alt="Icon 3" />
     <p>Excels in time management which helps increase productivity and organization</p>
   </div>
-</div>      
+</div>   
     </>
-   
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -1,3 +1,6 @@
+body {    background-color: #AF8260; 
+}
+
 .about {
     background-image:  linear-gradient(#000, #E4C59E);
     padding: 50px 0;
@@ -69,6 +72,7 @@ cursor: pointer;
     justify-content: center;
     display: flex;
     flex-direction: row;
+
 }
 
 .icon-container {
@@ -87,3 +91,20 @@ cursor: pointer;
     display: block;
     margin: 0 auto;
   }
+
+.generate-now {
+    background-color: #AF8260;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.recording-container {
+    padding-left: 900px;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+

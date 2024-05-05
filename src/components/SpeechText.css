@@ -14,12 +14,12 @@ body {
   }
   
   .button-container button {
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-bottom: 10px;
   }
 
 
   button {
-    background-color: #a9a9a9;
+    background-color: #E4C59E;
   color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -30,4 +30,13 @@ body {
 
   button .hover {
     background-color: whitesmoke;
+  }
+
+  .note p{
+    justify-items: center;
+    font-size: larger;
+  }
+
+  .note {
+    background-image: url('../img/paper.jpeg');
   }
