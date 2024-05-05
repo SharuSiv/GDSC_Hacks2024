@@ -51,10 +51,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {isLoggedIn && (
-      <> <header className="header">
-        <img src={image} alt="logo" className="logo" />
-        <h1 className="welcome-message">Welcome Back, name!</h1>
-      </header>
+      <>
 
       <div className="Welcome-brief">
 
@@ -122,8 +119,6 @@ const Home = () => {
       </>)}
       {!isLoggedIn && ( <h1> You are not logged in. Please login to access this page</h1>)}
        
-      
-      
     </div>
   );
 };
