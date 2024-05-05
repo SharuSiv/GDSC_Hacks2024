@@ -4,6 +4,7 @@ import './SpeechText.css';
 import GestureContext from './GestureContext';
 // import GenerateNote from '../../server/GenerateNote';
 
+
 const audioBlobToBase64   = async (blob) => {
   const reader = new FileReader();
   return new Promise((resolve, reject) => {
@@ -144,6 +145,7 @@ const SpeechText = () => {
         <button onClick={startRecording} disabled={recording}>
           Start Recording
         </button>
+        <br/>
         <button onClick={stopRecording} disabled={!recording}>
           Stop Recording
         </button>
@@ -156,7 +158,10 @@ const SpeechText = () => {
   {transcription && ( <button className='generate-note' onClick={generateNote}>Generate Note</button>)}
     </div>
     <br/>
-    {note} 
+
+    <div className='note' >
+    {note}
+    </div> 
     </div>
   );
 };

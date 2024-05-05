@@ -31,3 +31,12 @@ body {
   button .hover {
     background-color: whitesmoke;
   }
+
+  .note p{
+    justify-items: center;
+    font-size: larger;
+  }
+
+  .note {
+    background-image: url('../img/paper.jpeg');
+  }

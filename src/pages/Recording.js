@@ -9,7 +9,6 @@ import GestureContext from '../components/GestureContext.js'
 const Recording = () => {
     const [gesture, setGesture] = useState(null);
 
-
   return (
     <GestureContext.Provider value={{gesture,setGesture}}>
     <div className="recording-header">
