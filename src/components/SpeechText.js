@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './SpeechText.css';
 
-const audioBlobToBase64 = async (blob) => {
+const audioBlobToBase64   = async (blob) => {
   const reader = new FileReader();
   return new Promise((resolve, reject) => {
     reader.onloadend = () => {
