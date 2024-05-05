@@ -1,3 +1,4 @@
+![Alt text](/relative/path/to/img_main.png?raw=true "Optional Title")
 _Why bother typing notes when you can have AI write it for you! With simple movement of your hand the world doc is literally in your hands! Amazing right! Give us a try! We promise it'll be worth it!_
 
 ## 💡 Inspiration
