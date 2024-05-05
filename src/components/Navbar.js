@@ -21,29 +21,28 @@ export const Navbar = () => {
                About Us
              </NavLink>
            </li>
-          {isLoggedIn && (
-            <> <li className="nav__item">
-            <NavLink to="/Home" className="nav__link">
-              Home
-            </NavLink>
-            
-          </li> 
+           {isLoggedIn ? (
+            <>
+              <li className="nav__item">
+                <NavLink to="/Home" className="nav__link">
+                  Home
+                </NavLink>
+              </li>
 
-          <li className="nav__item">
-            <NavLink to="/" className="nav__link">
-              Logout
-            </NavLink>
-            
-          </li> 
-          
-          </> )}
-           
-           
-           {!isLoggedIn && (<li className="nav__item">
-             <NavLink to="/Auth" className="nav__link button">
-               Login
-             </NavLink>
-           </li>)}
+              <li className="nav__item">
+                <NavLink to="/" className="nav__link">
+                  Logout
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <li className="nav__item">
+              <NavLink to="/Auth" className="nav__link button">
+                Login
+              </NavLink>
+            </li>
+          )}
+     
            
          </ul>
        </div>
