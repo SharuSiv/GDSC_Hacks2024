@@ -1,11 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import './Recording.css';
 
-
-const audioBlobToBase64 = (blob) => {
+const audioBlobToBase64 = async (blob) => {
+  const reader = new FileReader();
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
     reader.onloadend = () => {
       const arrayBuffer = reader.result;
       const base64Audio = btoa(
@@ -21,10 +19,11 @@ const audioBlobToBase64 = (blob) => {
   });
 };
 
-const Recording = () => {
+const App = () => {
   const [recording, setRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const [transcription, setTranscription] = useState('');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     return () => {
@@ -34,11 +33,7 @@ const Recording = () => {
     };
   }, [mediaRecorder]);
 
-  if (!process.env.REACT_APP_GOOGLE_API_KEY) {
-    throw new Error("REACT_APP_GOOGLE_API_KEY not found in the environment");
-  }
-
-  const apiKey = process.env.GOOGLE_API_KEY;
+  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
   const startRecording = async () => {
     try {
@@ -54,8 +49,6 @@ const Recording = () => {
         const base64Audio = await audioBlobToBase64(audioBlob);
 
         try {
-          const startTime = performance.now();
-
           const response = await axios.post(
             `https://speech.googleapis.com/v1/speech:recognize?key=${apiKey}`,
             {
@@ -70,11 +63,6 @@ const Recording = () => {
             }
           );
 
-          const endTime = performance.now();
-          const elapsedTime = endTime - startTime;
-
-          console.log('Time taken (ms):', elapsedTime);
-
           if (response.data.results && response.data.results.length > 0) {
             setTranscription(response.data.results[0].alternatives[0].transcript);
           } else {
@@ -83,6 +71,7 @@ const Recording = () => {
           }
         } catch (error) {
           console.error('Error with Google Speech-to-Text API:', error.response.data);
+          setError('Error transcribing audio');
         }
       });
 
@@ -90,6 +79,7 @@ const Recording = () => {
       setMediaRecorder(recorder);
     } catch (error) {
       console.error('Error getting user media:', error);
+      setError('Error accessing microphone');
     }
   };
 
@@ -106,7 +96,7 @@ const Recording = () => {
       <div>
         <h1>Speech to Text</h1>
       </div>
-      <div className="button-container"> {}
+      <div className="button-container">
         <button onClick={startRecording} disabled={recording}>
           Start Recording
         </button>
@@ -114,6 +104,7 @@ const Recording = () => {
           Stop Recording
         </button>
       </div>
+      {error && <div>Error: {error}</div>}
       <div>
         <p>Transcription: {transcription}</p>
       </div>
@@ -121,4 +112,4 @@ const Recording = () => {
   );
 };
 
-export default Recording;
+export default App;

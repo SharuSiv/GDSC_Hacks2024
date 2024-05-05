@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Note from '../components/Note';
 import Folder from '../components/Folder';
-import image from '../img/image.png';
 import addnotes from '../img/more.png';
 import recordLogo from '../img/wave-sound.png';
 import importNote from '../img/upload.png';
 import './Home.css';
 import { useNavigate } from "react-router-dom";
+import backgroundImage from '../img/welcome-brief.png';
 
 
 const Home = () => {
@@ -47,34 +47,41 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <header className="header">
-        <img src={image} alt="logo" className="logo" />
-        <h1 className="welcome-message">Welcome Back, name!</h1>
-      </header>
 
-      <nav className="nav">
+      <div className="Welcome-brief">
+
+        <h1 className="welcome-message">Welcome Back, Friend!</h1>
+        <br />
+        <p className="message"> A New Day, A New Note </p>
+        <p className="message"> What will you make today? </p>
+      </div>
+
+      <div className="nav">
         <ul className="nav-list">
+          
           <li className="nav-item">
             <button className="btn-add-note" onClick={addNote}>
               <img src={addnotes} alt="add more" />
             </button>
-
             <h4>+ Add Note</h4>
           </li>
+
           <li className="nav-item">
             <button className="btn-start-recording" onClick={recordNote}>
               <img src={recordLogo} alt="start recording" />
             </button>
             <h4>Start Recording</h4>
           </li>
+
           <li className="nav-item">
             <button className="btn-import-notes">
               <img src={importNote} alt="import notes" />
             </button>
             <h4>Import Notes</h4>
           </li>
+
         </ul>
-      </nav>
+      </div>
 
       <main className="main">
         <section className="folders-section">
