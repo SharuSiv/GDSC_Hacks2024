@@ -48,5 +48,3 @@
 
 //   process.stdout.write('aggregated response: ' + JSON.stringify(await streamingResp.response));
 // }
-
-
