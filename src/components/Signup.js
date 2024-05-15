@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages/auth.css'
+import '../pages/Auth.css'
 
 function Signup() {
   return (

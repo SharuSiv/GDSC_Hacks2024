@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
-import './auth.css';
+import './Auth.css';
 
 const Auth = () => {
   const [showLoginInfo, setShowLoginInfo] = useState(true);
