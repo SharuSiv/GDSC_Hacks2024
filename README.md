@@ -1,6 +1,7 @@
 ![Alt text](landingpage.png?raw=true "Optional Title")
 _Why bother typing notes when you can have AI write it for you! With simple movement of your hand the world doc is literally in your hands! Amazing right! Give us a try! We promise it'll be worth it!_
 
+
 ## 💡 Inspiration
 We at Note Ease saw the vast opportunity of expanding AI into the education, and took it to the next level with our full stack app, Note Ease. Throughout the journey we've come to acknowledge AI as much as it helps with careers can also start being an aid/guide to the new and upcoming generation of today. Through immersive lectures, timeless and effortless notetaking abilities, and it's use of AI, we've empowered an educational tool to aid in classroom learning and personalized notetaking abilities. 
 
