@@ -37,12 +37,12 @@ One of the main primary challenges we ran into during the collaboration of Note 
 ## 🏆 Accomplishments that we're proud of
 As a team, we've collectively collaborated although we're from different backgrounds within coding. As this is the first hackathon for most of our members we're proud to have attempted to create an impressive app that can allow students to feel at ease when it comes to note taking and paying attention in class. Although we all came from different backgrounds with different coding experiences we didn't let the differences stop us from making an incredible app which is being presented to you today. This app has been made with lots of attention and love hoping one day students will be able to use this in real time to help with their educational purposes.
 
-In terms of coding wise tho, we are proud to have set up the beginning stages of MongoDB, as well as proud of working with React. Pretty much all of my team members were new to React and learning it was a challenge itself however with teamwork and determination we've been able to overcome this obstacle. Another coding aspect which we're proud of is the inclusion of Tensor Flow and Google Cloud Speech-to-Text API.
+In terms of coding, we are proud to have set up the beginning stages of MongoDB, as well as proud of working with React. Pretty much all of my team members were new to React and learning it was a challenge itself however with teamwork and determination we've been able to overcome this obstacle. Another coding aspect which we're proud of is the inclusion of TensorFlow and Google Cloud Speech-to-Text API.
 
 ## 📑 What we learned
 Overall, our team has learned how to properly use the MERN stack to develop a web application and how to use react in terms of syntax both front end and back end. We've also been able to successfully use API with the help of Google Cloud, and further learned what Tensor Flow is used for and embedded it on our site. 
 
 ## 🔮 What's next for Note Ease
-- training the hand model further using Tensor Flow
+- Training the hand model further using Tensor Flow
 - Getting started with Google Gemini (Vertex AI) to help convert pdf of raw transcript into desired format 
 - Set-up MongoDB to store all notes and file setting
